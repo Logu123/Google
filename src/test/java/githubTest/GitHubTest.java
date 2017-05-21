@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 public class GitHubTest {
 	
@@ -22,6 +22,7 @@ public class GitHubTest {
 		File src=((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
 		//FileUtils.copyFile(src, new File("F:\\Testing_Materials\\Vmetrics_Selenuim\\SelenuimWorkSpace\\WebDriverTest\\Screenshots\\google.jpg"));
 		FileUtils.copyFile(src, new File("G:\\workspace\\GitHubTest\\ScreenShoot\\Flipkart.jpg"));
+		wd.quit();
 	}
 	
 
